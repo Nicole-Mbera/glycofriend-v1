@@ -1,0 +1,70 @@
+{
+  "rules": [
+    {
+      "id": "high_post_starch",
+      "conditions": {
+        "logType": "post_meal",
+        "readingColor": "red",
+        "foodCategories": ["starch"]
+      },
+      "suggestion": {
+        "en": "Your reading after this meal is high. Try reducing your starch portion (ugali, rice, or sweet potato) and adding more beans or lentils — same cost, slower glucose release.",
+        "rw": "Agaciro k'amaraso yawe nyuma y'ifunguro ni hejuru. Gerageza kugabanya igice cy'ibikomoka ku bijumba (ugali, umuceri, cyangwa ibijumba) no kongera ibishyimbo cyangwa amashaza — igiciro kimwe, amaraso azamuka buhoro."
+      }
+    },
+    {
+      "id": "high_post_meal_generic",
+      "conditions": {
+        "logType": "post_meal",
+        "readingColor": "red"
+      },
+      "suggestion": {
+        "en": "Your post-meal reading is high. Consider smaller portions and adding more vegetables to your next meal.",
+        "rw": "Agaciro k'amaraso nyuma y'ifunguro ni hejuru. Tekereza ibice bito no kongera imboga mu ifunguro ryawe rikurikira."
+      }
+    },
+    {
+      "id": "yellow_post_meal",
+      "conditions": {
+        "logType": "post_meal",
+        "readingColor": "yellow"
+      },
+      "suggestion": {
+        "en": "Your post-meal reading is slightly elevated. This is a reminder to watch portion sizes, especially for starches.",
+        "rw": "Agaciro k'amaraso nyuma y'ifunguro ni hejuru buhoro. Ibi bikumbutsa kureba ingano y'ibice, cyane cyane ibikomoka ku bijumba."
+      }
+    },
+    {
+      "id": "high_fasting",
+      "conditions": {
+        "logType": "fasting",
+        "readingColor": "red"
+      },
+      "suggestion": {
+        "en": "Your fasting reading is high. This may indicate your overnight glucose control needs attention. Please discuss with your doctor.",
+        "rw": "Agaciro k'amaraso yawe ku nzara ni hejuru. Ibi bishobora kwerekana ko ugenzura amaraso usindiye bisaba gutekereza. Vugana na muganga wawe."
+      }
+    },
+    {
+      "id": "consistent_red_week",
+      "conditions": {
+        "weeklyColor": "red",
+        "consecutiveRedWeeks": 2
+      },
+      "suggestion": {
+        "en": "You've had two difficult weeks in a row. Consider reaching out to your doctor — your medication or meal plan may need adjustment.",
+        "rw": "Ufite ibyumweru bibiri bigoye ikurikirana. Tekereza kuvugana na muganga wawe — imiti yawe cyangwa gahunda y'indyo bishobora gukenera guhindurwa."
+      }
+    },
+    {
+      "id": "good_week",
+      "conditions": {
+        "weeklyColor": "green"
+      },
+      "suggestion": {
+        "en": "Great week! Your readings are well-controlled. Keep up your current routine.",
+        "rw": "Icyumweru cyiza! Agaciro k'amaraso yawe ni cyiza. Komeza imyitwarire yawe isanzwe."
+      }
+    }
+  ]
+}

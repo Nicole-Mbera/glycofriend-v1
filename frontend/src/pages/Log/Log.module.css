@@ -1,0 +1,208 @@
+.container {
+  padding: 24px 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  margin-top: 24px;
+}
+
+/* Type Selector Grid */
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.typeCard {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-secondary);
+}
+
+.typeCard:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.typeCardActive {
+  background: rgba(52, 199, 89, 0.1);
+  border-color: var(--color-green);
+  color: var(--color-green);
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.15);
+}
+
+.typeIcon {
+  margin-bottom: 4px;
+}
+
+.typeLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Numeric Input */
+.readingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.readingInputBox {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.readingInput {
+  background: transparent;
+  border: none;
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 140px;
+  text-align: center;
+  outline: none;
+  letter-spacing: -2px;
+}
+
+.readingInput::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.readingInput:focus {
+  border-bottom: 2px solid var(--color-green);
+}
+
+.unit {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-left: 8px;
+}
+
+/* Form Elements */
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text-primary);
+  resize: vertical;
+  background: var(--bg-input);
+  transition: border-color 0.2s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-green);
+  background: #fff;
+}
+
+.otherToggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.otherToggle:hover {
+  color: var(--text-primary);
+}
+
+.btn {
+  width: 100%;
+  background: var(--color-green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 199, 89, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btnSecondary {
+  width: 100%;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.error {
+  color: #E74C3C;
+  font-size: 14px;
+  margin-top: 12px;
+  text-align: center;
+}

@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                        String    @id @default(uuid())
+  phone                     String    @unique
+  name                      String
+  diabetesType              String    // "type1", "type2", "gestational", "other"
+  medications               String[]  @default([])
+
+  physicianEmail            String?
+  reportFrequency           String?   // "weekly", "biweekly", "monthly"
+  lastReportSentAt          DateTime?
+
+  chwEmail                  String?
+  lastCHWAlertSentAt        DateTime?
+
+  // Phase 2 consent hooks — defaults true for Phase 1
+  consentSharedWithPhysician Boolean  @default(true)
+  consentSharedWithCHW       Boolean  @default(true)
+
+  createdAt                 DateTime  @default(now())
+
+  glucoseLogs               GlucoseLog[]
+  weeklySummaries           WeeklySummary[]
+}
+
+model GlucoseLog {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  readingMgdl Float
+  logType     String   // "fasting", "pre_meal", "post_meal"
+  color       String   // "green", "yellow", "red" — computed at write time
+  source      String   @default("manual") // "manual" | "cgm" | "wearable" — Phase 3 ready
+  loggedAt    DateTime @default(now())
+
+  mealLog     MealLog?
+}
+
+model MealLog {
+  id           String     @id @default(uuid())
+  glucoseLogId String     @unique
+  glucoseLog   GlucoseLog @relation(fields: [glucoseLogId], references: [id])
+  foods        String[]   @default([])
+  notes        String?
+  loggedAt     DateTime   @default(now())
+}
+
+model WeeklySummary {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  weekStart      DateTime // Monday 00:00:00 of that week
+  averageReading Float
+  colorBadge     String   // "green", "yellow", "red"
+  totalReadings  Int
+  suggestions    String[] @default([])
+  generatedAt    DateTime @default(now())
+}
+
+model FoodOption {
+  id            String @id
+  nameEn        String
+  nameRw        String
+  category      String // "starch", "protein", "vegetable", "fruit", "dairy", "other"
+  glycemicIndex String // "low", "medium", "high"
+}
+
+model OtpSession {
+  id        String   @id @default(uuid())
+  phone     String
+  code      String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

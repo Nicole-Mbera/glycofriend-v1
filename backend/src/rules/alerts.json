@@ -1,0 +1,37 @@
+{
+  "alerts": [
+    {
+      "id": "consecutive_red_weeks",
+      "triggerCondition": "consecutiveRedWeeks >= 2",
+      "recipientRole": "chw",
+      "pdfTemplate": "chw_alert",
+      "cooldownDays": 7,
+      "alertReason": {
+        "en": "This patient has had 2 or more red weeks in a row.",
+        "rw": "Uyu murwayi afite ibyumweru 2 cyangwa birenga afite ibipimo bibi."
+      }
+    },
+    {
+      "id": "no_logs_5_days",
+      "triggerCondition": "daysSinceLastLog >= 5",
+      "recipientRole": "chw",
+      "pdfTemplate": "chw_alert",
+      "cooldownDays": 7,
+      "alertReason": {
+        "en": "This patient has not logged any readings in 5 or more days.",
+        "rw": "Uyu murwayi ntiyanditse ibipimo by'amaraso mu minsi 5 cyangwa irenga."
+      }
+    },
+    {
+      "id": "critically_high_week",
+      "triggerCondition": "weeklyAverage >= 200",
+      "recipientRole": "chw",
+      "pdfTemplate": "chw_alert",
+      "cooldownDays": 7,
+      "alertReason": {
+        "en": "This patient's average reading this week is critically high (≥200 mg/dL).",
+        "rw": "Igipimo cy'amaraso cy'uyu murwayi iki cyumweru ni hejuru cyane (≥200 mg/dL)."
+      }
+    }
+  ]
+}

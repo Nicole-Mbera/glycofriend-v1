@@ -1,0 +1,22 @@
+[
+  { "id": "f001", "nameEn": "Ugali (maize porridge)", "nameRw": "Ubugali", "category": "starch", "glycemicIndex": "high" },
+  { "id": "f002", "nameEn": "Rice", "nameRw": "Umuceri", "category": "starch", "glycemicIndex": "high" },
+  { "id": "f003", "nameEn": "Sweet potato", "nameRw": "Ibijumba", "category": "starch", "glycemicIndex": "medium" },
+  { "id": "f004", "nameEn": "Irish potato", "nameRw": "Pomme de terre", "category": "starch", "glycemicIndex": "high" },
+  { "id": "f005", "nameEn": "Matoke (green banana)", "nameRw": "Ibitoke", "category": "starch", "glycemicIndex": "medium" },
+  { "id": "f006", "nameEn": "Beans", "nameRw": "Ibishyimbo", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f007", "nameEn": "Lentils", "nameRw": "Amashaza", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f008", "nameEn": "Isombe (cassava leaves)", "nameRw": "Isombe", "category": "vegetable", "glycemicIndex": "low" },
+  { "id": "f009", "nameEn": "Cassava", "nameRw": "Imyumbati", "category": "starch", "glycemicIndex": "high" },
+  { "id": "f010", "nameEn": "Sorghum porridge", "nameRw": "Ikigage", "category": "starch", "glycemicIndex": "medium" },
+  { "id": "f011", "nameEn": "Eggs", "nameRw": "Amagi", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f012", "nameEn": "Chicken", "nameRw": "Inkoko", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f013", "nameEn": "Fish", "nameRw": "Ifi", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f014", "nameEn": "Avocado", "nameRw": "Avoka", "category": "fruit", "glycemicIndex": "low" },
+  { "id": "f015", "nameEn": "Banana", "nameRw": "Igitoki", "category": "fruit", "glycemicIndex": "medium" },
+  { "id": "f016", "nameEn": "Milk", "nameRw": "Amata", "category": "dairy", "glycemicIndex": "low" },
+  { "id": "f017", "nameEn": "Spinach / amaranth greens", "nameRw": "Imbwija", "category": "vegetable", "glycemicIndex": "low" },
+  { "id": "f018", "nameEn": "Pumpkin", "nameRw": "Inzuza", "category": "vegetable", "glycemicIndex": "low" },
+  { "id": "f019", "nameEn": "Groundnuts / peanuts", "nameRw": "Amacunda", "category": "protein", "glycemicIndex": "low" },
+  { "id": "f020", "nameEn": "Soda / soft drink", "nameRw": "Isoda", "category": "other", "glycemicIndex": "high" }
+]

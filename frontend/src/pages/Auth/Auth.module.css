@@ -1,0 +1,127 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: 24px;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+  padding: 48px 36px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: var(--color-green);
+  margin-bottom: 8px;
+}
+
+.sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  margin-top: -24px;
+}
+
+.input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-size: 18px;
+  color: var(--text-primary);
+  outline: none;
+  margin-bottom: 20px;
+  transition: all var(--transition-fast);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.input:focus {
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 4px rgba(52, 199, 89, 0.15), inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.otpInput {
+  letter-spacing: 12px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  background: var(--color-green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(52, 199, 89, 0.3);
+}
+
+.btn:hover { 
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(52, 199, 89, 0.4); 
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:disabled { 
+  opacity: 0.6; 
+  cursor: not-allowed; 
+  transform: none; 
+  box-shadow: none; 
+}
+
+.error {
+  color: var(--color-red);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  background: rgba(255, 59, 48, 0.1);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.link {
+  margin-top: 24px;
+  background: none;
+  border: none;
+  color: var(--color-green);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.link:hover { opacity: 0.8; }
+.link:disabled { color: var(--text-secondary); cursor: default; }

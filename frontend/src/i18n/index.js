@@ -1,0 +1,126 @@
+const strings = {
+  en: {
+    appName: "GlycoFriend",
+    // Auth
+    enterPhone: "Enter your phone number",
+    sendCode: "Send Code",
+    enterCode: "Enter your OTP code",
+    verify: "Verify",
+    resend: "Resend code",
+    // Onboarding
+    setupProfile: "Set up your profile",
+    name: "Full name",
+    diabetesType: "Diabetes type",
+    medications: "Medications (one per line)",
+    physicianEmail: "Physician email",
+    reportFrequency: "Report frequency",
+    chwEmail: "Community health worker email",
+    saveProfile: "Save & Continue",
+    weekly: "Weekly",
+    biweekly: "Every 2 weeks",
+    monthly: "Monthly",
+    type1: "Type 1",
+    type2: "Type 2",
+    gestational: "Gestational",
+    other: "Other",
+    // Logging
+    logReading: "Log Reading",
+    fasting: "Fasting",
+    preMeal: "Pre-meal",
+    postMeal: "Post-meal",
+    mgdl: "mg/dL",
+    whatDidYouEat: "What did you eat? (optional)",
+    otherNotes: "Other notes...",
+    saveReading: "Save Reading",
+    // Dashboard
+    dashboard: "Dashboard",
+    thisWeek: "This week",
+    avg: "Avg",
+    last4Weeks: "Last 4 weeks",
+    trend: "14-day trend",
+    recentLogs: "Recent Logs",
+    logAReading: "Log a Reading",
+    noLogsYet: "No readings yet. Log your first reading!",
+    // Settings
+    settings: "Settings",
+    saveSettings: "Save Settings",
+    sendReportNow: "Send Report to Physician",
+    sendCHWAlert: "Send CHW Alert",
+    previewReport: "Preview Report",
+    // Colors
+    green: "Green",
+    yellow: "Yellow",
+    red: "Red",
+    // Status
+    loading: "Loading...",
+    saved: "Saved!",
+    error: "Something went wrong.",
+    sending: "Sending...",
+    sent: "Sent!",
+  },
+  rw: {
+    appName: "GlycoFriend",
+    enterPhone: "Injiza inomero ya telefoni yawe",
+    sendCode: "Ohereza Kode",
+    enterCode: "Injiza kode ya OTP",
+    verify: "Emeza",
+    resend: "Ohereza kode nanone",
+    setupProfile: "Igenamiterere ry'umwirondoro wawe",
+    name: "Amazina yose",
+    diabetesType: "Ubwoko bwa diyabete",
+    medications: "Imiti (imwe ku murongo)",
+    physicianEmail: "Imeyili ya muganga",
+    reportFrequency: "Inshuro z'raporo",
+    chwEmail: "Imeyili y'umujyanama w'ubuzima",
+    saveProfile: "Bika & Komeza",
+    weekly: "Buri cyumweru",
+    biweekly: "Buri byumweru bibiri",
+    monthly: "Buri kwezi",
+    type1: "Ubwoko 1",
+    type2: "Ubwoko 2",
+    gestational: "Iy'inda",
+    other: "Ibindi",
+    logReading: "Andika Agaciro",
+    fasting: "Ku nzara",
+    preMeal: "Mbere y'ifunguro",
+    postMeal: "Nyuma y'ifunguro",
+    mgdl: "mg/dL",
+    whatDidYouEat: "Ni iki wariye? (ntibisabwa)",
+    otherNotes: "Andi makuru...",
+    saveReading: "Bika Agaciro",
+    dashboard: "Imbonerahamwe",
+    thisWeek: "Iki cyumweru",
+    avg: "Hagati",
+    last4Weeks: "Ibyumweru 4 bishize",
+    trend: "Impinduka z'iminsi 14",
+    recentLogs: "Ibyanditswe Biheruka",
+    logAReading: "Andika Agaciro",
+    noLogsYet: "Nta bisobanuro bihari. Andika ibya mbere!",
+    settings: "Igenamiterere",
+    saveSettings: "Bika Igenamiterere",
+    sendReportNow: "Ohereza Raporo kwa Muganga",
+    sendCHWAlert: "Ohereza Ijambo ry'Ubutaka",
+    previewReport: "Reba Raporo",
+    green: "Icyatsi",
+    yellow: "Umuhondo",
+    red: "Umutuku",
+    loading: "Gutegereza...",
+    saved: "Byabitswe!",
+    error: "Hari ikibazo.",
+    sending: "Kohereza...",
+    sent: "Byoherejwe!",
+  },
+};
+
+const currentLang = localStorage.getItem("gf_lang") || "en";
+
+export function t(key) {
+  return strings[currentLang]?.[key] ?? strings.en[key] ?? key;
+}
+
+export function setLang(lang) {
+  localStorage.setItem("gf_lang", lang);
+  window.location.reload();
+}
+
+export const lang = currentLang;
